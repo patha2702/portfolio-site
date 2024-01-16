@@ -133,6 +133,13 @@ body{
     gap: 2em;
 }
 
+.AboutSection__techStackContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 3em;
+}
+
 /* Portfolio */
 .PortfolioSection{
     grid-area: Portfolio;
@@ -154,8 +161,13 @@ body{
     padding: 0.5em;
     background-color: #232123;
     border-radius: 7px;
+
 }
 
+.PortfolioSection__cardImage{
+    width: 100%;
+    border-radius: 7px;
+}
 /* Blog */
 
 .BlogSection{
@@ -189,11 +201,19 @@ body{
     background-color: #161417;
 }
 
+.ContactSection__titleContainer {
+    margin-block: 1em;
+}
+
 .ContactSection__socialsContainer{
+    margin-block: 1.5em;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 5em;
     align-items: center;
 }
+
 /* Images */
 
 .HeaderSection__avatar{
@@ -208,6 +228,16 @@ body{
     height: 100%;
     border: 5px solid #fc123c;
 }
+ 
+.logo {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
 
 /* Typography */
 h1{
