@@ -18,6 +18,9 @@ body{
 
 /* Layout */
 
+@media screen {
+    
+}
 .PortfolioContainer{
     position: relative;
     display: grid;
@@ -355,4 +358,96 @@ a{
 .BlogSection__card:focus{
     -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) ;
 	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) ;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 991px) {
+    .MainSection__profileImageContainer {
+        display: none;
+    }
+    .MainSection {
+        width: 100%;
+        padding: 2em 3em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .MainSection__intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 2em;
+    }
+    .MainSection__content {
+        padding: 1em 0;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+    .HeaderSection__navList {
+        width: max-content
+    }
+    .PortfolioSection__cardImage{
+       height: 60%;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .PortfolioContainer{
+        grid-template-columns: unset;
+        grid-template-areas: unset;
+        position: relative;
+        display: flex;
+    }
+    .MainSection,
+    .AboutSection,
+    .PortfolioSection,
+    .ContactSection {
+        width: 100vw;
+        border-top: 1px solid white;
+    }
+    .HeaderSection {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .AboutSection,
+    .PortfolioSection {
+        height: max-content;
+    }
+
+    .PortfolioSection__cardContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: minmax(100px, 200px) minmax(100px, 200px);
+        gap: 1em;
+        margin: 2em 0;
+    }
+
+    .ContactSection__socialsContainer{
+        margin-block: 1.5em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        gap: 3em;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .PortfolioSection__cardContainer{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(100px, 200px);
+        gap: 1em;
+        margin: 2em 0;
+    }
+
+    .PortfolioSection__card {
+        width: 80%;
+    }
 }
